@@ -1,0 +1,25 @@
+//Given an array arr[] of integers, find out the maximum difference between any two elements such that larger element appears after the smaller number. 
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[]={2, 3, 10, 6, 4, 8, 1};
+    int n=sizeof(arr)/sizeof(int);
+    int max=0;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            int m=arr[j]-arr[i];
+            if(m>max)
+            {
+                max=m;
+            }
+        }
+    }
+    printf("%d",max);
+}
+
+o/p
+8
